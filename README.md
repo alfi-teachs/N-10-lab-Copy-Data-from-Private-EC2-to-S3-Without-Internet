@@ -95,3 +95,11 @@ AWS automatically adds a route to the route table.
 Example route added:
 
 pl-xxxxxxx → vpce-xxxxxxx
+
+# Step 6: Connect to Private EC2
+
+SSH into the instance.
+
+Example:
+
+ssh -i key.pem ec2-user@private-ip

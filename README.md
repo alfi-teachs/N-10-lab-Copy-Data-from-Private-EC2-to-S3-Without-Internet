@@ -59,3 +59,11 @@ Attach an IAM Role with S3 access.
 Policy example:
 
 AmazonS3FullAccess
+
+# Step 4: Create S3 Bucket
+
+Create a bucket in Amazon S3.
+
+Example name:
+
+my-private-data-bucket

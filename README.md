@@ -67,3 +67,31 @@ Create a bucket in Amazon S3.
 Example name:
 
 my-private-data-bucket
+
+# Step 5: Create VPC Endpoint
+
+Go to VPC → Endpoints → Create Endpoint.
+
+Configuration:
+
+Service:
+
+com.amazonaws.region.s3
+
+
+Type:
+
+Gateway Endpoint
+
+
+Select:
+
+Your VPC
+
+Private Route Table
+
+AWS automatically adds a route to the route table.
+
+Example route added:
+
+pl-xxxxxxx → vpce-xxxxxxx

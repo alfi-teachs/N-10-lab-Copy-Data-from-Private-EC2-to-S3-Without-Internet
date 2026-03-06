@@ -23,3 +23,19 @@ Public Subnet
 
 Private Subnet
 10.0.2.0/24
+
+
+# Step 2: Create Route Tables
+
+Public Route Table
+
+Destination     Target
+0.0.0.0/0       Internet Gateway
+
+
+Private Route Table
+
+Local routes only
+
+
+Associate the private subnet with the private route table.

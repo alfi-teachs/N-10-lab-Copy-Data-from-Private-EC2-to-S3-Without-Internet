@@ -123,3 +123,17 @@ aws s3 ls s3://my-private-data-bucket/
 You should see:
 
 test.txt
+
+# Result
+
+The private EC2 instance successfully uploaded data to S3 using a VPC Endpoint without accessing the public internet.
+
+# Key Learning
+
+Secure service communication inside AWS
+
+Using Gateway Endpoint for S3
+
+Private subnet architecture
+
+Data transfer without NAT or Internet Gateway

@@ -39,3 +39,23 @@ Local routes only
 
 
 Associate the private subnet with the private route table.
+
+# Step 3: Launch EC2 Instance
+
+Launch EC2 in the private subnet.
+
+Configuration example:
+
+AMI: Amazon Linux
+
+Subnet: Private Subnet
+
+Public IP: Disabled
+
+Security Group: Allow SSH (from bastion if needed)
+
+Attach an IAM Role with S3 access.
+
+Policy example:
+
+AmazonS3FullAccess

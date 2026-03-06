@@ -103,3 +103,23 @@ SSH into the instance.
 Example:
 
 ssh -i key.pem ec2-user@private-ip
+
+# Step 7: Create a Test File
+echo "Hello from Private EC2" > test.txt
+
+# Step 8: Copy File to S3
+
+Upload the file.
+
+aws s3 cp test.txt s3://my-private-data-bucket/
+
+# Step 9: Verify Upload
+
+Check the bucket.
+
+aws s3 ls s3://my-private-data-bucket/
+
+
+You should see:
+
+test.txt

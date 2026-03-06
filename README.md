@@ -6,4 +6,20 @@ Private EC2 (in private subnet) → S3 VPC Gateway Endpoint → S3  The traffic 
 
 # EC2 (Private Subnet) → VPC Endpoint → S3
 
-# No Internet Gateway or NAT Gateway is required for S3 access.
+No Internet Gateway or NAT Gateway is required for S3 access.
+
+# Step 1: Create VPC
+
+Create a VPC.
+
+Example configuration:
+
+CIDR: 10.0.0.0/16
+
+Create two subnets.
+
+Public Subnet
+10.0.1.0/24
+
+Private Subnet
+10.0.2.0/24

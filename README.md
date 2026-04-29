@@ -40,7 +40,19 @@ Local routes only
 
 Associate the private subnet with the private route table.
 
-# Step 3: Launch EC2 Instance
+# step 3
+
+create a role 
+
+aws service : ec2
+
+s3 full acess
+
+role name 
+
+create role 
+
+# Step 4: Launch EC2 Instance
 
 Launch EC2 in the private subnet.
 
@@ -60,7 +72,16 @@ Policy example:
 
 AmazonS3FullAccess
 
-# Step 4: Create S3 Bucket
+# step 5: if for got attach role 
+select instance 
+
+actions -- security 
+
+modify iam role
+
+select the role 
+
+# Step 6: Create S3 Bucket
 
 Create a bucket in Amazon S3.
 
@@ -68,7 +89,7 @@ Example name:
 
 my-private-data-bucket
 
-# Step 5: Create VPC Endpoint
+# Step 7: Create VPC Endpoint
 
 Go to VPC → Endpoints → Create Endpoint.
 
@@ -96,7 +117,7 @@ Example route added:
 
 pl-xxxxxxx → vpce-xxxxxxx
 
-# Step 6: Connect to Private EC2
+# Step 8: Connect to Private EC2
 
 SSH into the instance.
 
@@ -104,7 +125,8 @@ Example:
 
 ssh -i key.pem ec2-user@private-ip
 
-# Step 7: Create a Test File
+# Step 9: Create a Test File
+
 echo "Hello from Private EC2" > test.txt
 
 # Step 8: Copy File to S3
